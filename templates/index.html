@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог пользователей</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+    <body>
+        <div class="menu">
+            <a href="{% url 'all_firstnames' %}">Names</a>
+            <a href="{% url 'all_lastnames' %}">Surnames</a>
+            <a href="{% url 'all_emails' %}">Emails</a>
+            <a href="{% url 'all_phone_numbers' %}">Phone Number</a>
+        </div>
+    </body>
+</html>

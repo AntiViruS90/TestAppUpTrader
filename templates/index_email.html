@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Email</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+    <body>
+        <h2>Table</h2>
+        <table>
+            <tr><th>ID</th><th>Name</th><th>Email</th></tr>
+            {% for name in database %}
+                <tr>
+                    <td>{{ name.id }}</td>
+                    <td>{{ name.firstname }}</td>
+                    <td>{{ name.email }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <hr>
+        <br>
+        <a href="{% url 'home' %}"><button>На главную</button></a>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+    <body>
+        <h2>Table</h2>
+        <table>
+            <tr><th>Name</th><th>Surname</th><th>Phone Number</th></tr>
+            {% for name in database %}
+                <tr>
+                    <td>{{ name.firstname }}</td>
+                    <td>{{ name.lastname }}</td>
+                    <td>{{ name.phone }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <hr>
+        <br>
+        <a href="{% url 'home' %}"><button>На главную</button></a>
+    </body>
+</html>
